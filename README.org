@@ -7,10 +7,20 @@ James Porter's [[https://github.com/jamesporter/solandra][Solandra]] framework u
 
 ** SETUP
 
-We followed [[https://github.com/bhauman/figwheel-main-template][this guide]] to make a Figwheel project with added Reagent, using Leiningen. (The plain old `clj` command line tools require less machinery, but a bit more work to set up for template creation; it's a toss-up between them.)
+We followed [[https://github.com/bhauman/figwheel-main-template][this guide]] to make a [[https://github.com/bhauman/figwheel-main][Figwheel Main]] project with added [[https://reagent-project.github.io/][Reagent]], using [[https://leiningen.org/][Leiningen]]. (The plain old ~clj~ command line tools require less machinery, but a bit more work to set up for template creation; it's a toss-up between them.)
 
 #+BEGIN_SRC shell-script
   lein new figwheel-main starter.core -- --reagent
 #+END_SRC
 
 Then we're good to go in the ~starter.core~ directory with ~cider-jack-in-cljs~ from Emacs: that gives us a basic page with some React machinery and a live code-reloading REPL.
+
+** SOLANDRA
+
+Use ~npm~ to install Solandra where the main index page can see it:
+
+#+BEGIN_SRC shell-script
+  (cd resources/public && npm i solandra)
+#+END_SRC
+
+(That creates a ~node_modules~ directory which we will git-ignore, so regenerate it as needed.)

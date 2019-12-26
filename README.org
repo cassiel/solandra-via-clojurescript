@@ -1,0 +1,6 @@
+-*- mode: org; mode: visual-line; -*-
+#+STARTUP: indent
+
+* ~solandra-via-clojurescript~
+
+James Porter's [[https://github.com/jamesporter/solandra][Solandra]] framework utilised via ClojureScript.
